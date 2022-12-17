@@ -264,7 +264,7 @@ greater than those obtained by the original query.
 Out of Vocabulary Words and Word Preprocessors
 ----------------------------------------------
 
-It is common in the literature to find bias tests whose tagret sets are
+It is common in the literature to find bias tests whose target sets are
 common names of social groups. These names are commonly cased and may
 contain special characters. There are several embedding models whose
 words are not cased or do not have accents or other special characters,
