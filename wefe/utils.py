@@ -113,7 +113,7 @@ def run_queries(
     return_only_aggregation: bool = False,
     warn_not_found_words: bool = False,
 ) -> pd.DataFrame:
-    """Run several queries over a several word embedding models using a specific metic.
+    """Run several queries over several word embedding models using a specific metric.
 
     Parameters
     ----------
@@ -122,15 +122,16 @@ def run_queries(
     queries : list
         An iterable with a set of queries.
     word_embeddings_models : list
-        An iterable with a set of word embedding pretrianed models.
+        An iterable with a set of word embedding pretrained models.
     queries_set_name : str, optional
         The name of the set of queries or the criteria that will be tested,
-        by default 'Unnamed queries set'
+        by default 'Unnamed queries set'.
     lost_vocabulary_threshold : float, optional
-        The threshold that will be passed to the , by default 0.2
+        The threshold that will be passed to the run_query method,
+        by default 0.2.
     metric_params : dict, optional
-        A dict with custom params that will passed to run_query method of the
-        respective metric, by default {}
+        A dictionary with custom parameters that will be passed to the
+        run_query method of the respective metric, by default {}.
     generate_subqueries: bool, optional
         It indicates if the program, when detecting queries with a bigger
         template than the metric, should try to generate subqueries compatible
@@ -145,7 +146,7 @@ def run_queries(
         function.
     aggregation_function : Union[str, Callable], optional
         The function that will be applied row by row to add the results.
-        It must be pandas row compatible operation.
+        It must be a pandas row compatible operation.
         Implemented functions: 'sum', 'abs_sub', 'avg' and 'abs_avg',
         by default 'abs_avg'.
     return_only_aggregation : bool, optional
